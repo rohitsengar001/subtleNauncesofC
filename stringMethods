@@ -1,18 +1,25 @@
-int mystrcmp(char s1[],char s2[])
+int mystrcmp(char s1[], char s2[]) 
 {
-    int count1=0,count2=0;
-  for(int i=0;(s1[i]!='\0'&& s2[i]!='\0');i++)
-  {
-       if(s1[i]==s2[i])
-        continue;
-      else
-      {
-          if(s1[i]>s2[i])
-            return 1; //means sting 1 is greater in lexicographical order
-          else
-            return 2; // means sting 2 is greater in lexicographical order
-      }
-         
-  }  
-  return 0;// that's string are matched
+    /*
+    *@param:both should be in string type
+    *@return 0: string are matched
+    *@return 1: string 'first' greater came into lexical sequence
+    *@return 2: string 'second' greater came into lexical sequence
+
+    */
+    int count1 = 0, count2 = 0;
+    for (int i = 0; (s1[i] != '\0' && s2[i] != '\0'); i++)
+    {
+        //   printf("\nchecking string");
+        if (s1[i] == s2[i])
+            continue;
+        else
+        {
+            if (s1[i] > s2[i])
+                return 1;
+            else
+                return 2;
+        }
+    }
+    return 0;
 }
